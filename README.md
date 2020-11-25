@@ -32,3 +32,8 @@ dotnet add package Microsoft.Azure.Storage.Blob
 ```
 3. Change line in: `local.settings.json"AzureWebJobsStorage": "Change Me "`. This is Application settings dynamic generated after deployed, or pass to existing BlobStorageAccount
 4. Run
+
+# Img Scrapper 2
+
+![image](https://user-images.githubusercontent.com/38471368/100287662-55acd000-2f75-11eb-8a83-3522dc67eeb2.png)
+
