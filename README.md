@@ -5,6 +5,10 @@ A microservice designed to download images from selected websites.<br/>
 You may connect to ImgScrapper API through REST interface using HTTP or HTTPS protocol. No authorisation is needed. Main endpoint adress:
 https://imgscrapper.azurewebsites.net/api/ImgScrapper
 
+![Architecture1](https://user-images.githubusercontent.com/38471368/100264102-a9f08980-2f4e-11eb-8565-bd1ac2e6fffd.png)
+
+Azure functions offers integration with a number of Azure services, include Azure Blob Storage, which is a great technology to store images as blobs. It's triggered  by an HTTP request.
+
 ## Request body schema: application/json
 
 ```
