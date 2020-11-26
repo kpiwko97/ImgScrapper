@@ -37,3 +37,15 @@ dotnet add package Microsoft.Azure.Storage.Blob
 
 ![image](https://user-images.githubusercontent.com/38471368/100287662-55acd000-2f75-11eb-8a83-3522dc67eeb2.png)
 
+The most time it takes to download images. The infrastructure was designed to maximally reduce the time of downloading multiple files simultaneously.
+At the beginning all tags which contain valid links are scrapped from website and then put on Azure Queue.
+If there are a number of links to be processed in the queue is greater than 100, Azure Fumction will automatically scale-out. 
+
+## Authorization
+
+![image](https://user-images.githubusercontent.com/38471368/100326260-05139200-2fca-11eb-85f5-3340229d76df.png)
+
+Each function checks the request headers where the user must provide: username and password.
+The question in how to secure credentials and store them in the right place - in this case Azure Key Vault.
+Azure Key Vault with Azure Functions can store secrets from the source code in the secure way. 
+Add Key Vault secrets reference in the Function App configuration. 
