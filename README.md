@@ -49,3 +49,9 @@ Each function checks the request headers where the user must provide: username a
 The question in how to secure credentials and store them in the right place - in this case Azure Key Vault.
 Azure Key Vault with Azure Functions can store secrets from the source code in the secure way. 
 Add Key Vault secrets reference in the Function App configuration. 
+
+## CI/CD
+![image](https://user-images.githubusercontent.com/38471368/100286121-817a8680-2f72-11eb-8fb1-9ff0aceb7a5f.png)
+
+Function App enables for continuous deployment (CI / CD) to the cloud.
+Deployment center provide continuous integration with a GitHub repo or Azure DevOps Services. It is possible to go one step further and configure Deployment slots which allows to validate app changes in a staging deployment slot before swapping it with the production slot.
